@@ -14,9 +14,57 @@
 
 body {
     font-family: 'SN Pro', sans-serif;
-    display: flex; /* So cnetering is easier */
-    flex-direction: column; /* This flexbox takes up whole page, by default it is flex row */
-    align-items: center; /* Align items = horizontal - centre of the column */
-    justify-content: center; /* Centres them vertically */
+    display: flex; /* So centering is easier */
+    align-items: center; /* Align items = vertical */
+    justify-content: center; /* Centres them horizontal */
     height: 100vh; /* height of 100vh takes up 100% of the browser screen */
+}
+
+.container {
+    /* this auto displays as flex row */
+    display: flex;
+    width: 90vw;
+    /* justify content centres horizontally */
+    justify-content: center;
+}
+
+.panel {
+    background-size: small cover;
+    background-position: center; /* we see center of image, eventhough we can't see whole image */
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: #fff; /* color of text */
+    cursor: pointer; /* when you hover over, curser turns to pointer */
+    flex: 0.5; /* sets them all to same width, but when active, this changes */
+    margin: 8px;
+    position: relative; /* outter panel class is relative, so you can position h3's inside as absolute */
+    transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0; /* makes them invisble by default */
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+}
+
+@media(max-width: 480px) {
+    .container {
+        width: 100vh;    
+    }
+
+    .panel:nth-of-type(4),.panel:nth-of-type(5) { /* :nth-of-type(4) selects the 4th element*/
+        display: none;
+    }
 }
