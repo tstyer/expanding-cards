@@ -57,6 +57,9 @@ body {
 
 .panel.active h3 {
     opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+    /* On the panel that is now active, the transition effects the opacacite of the h3.
+       You only see the h3 when the card is mostly expanded now.  */
 }
 
 @media(max-width: 480px) {
