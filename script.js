@@ -10,7 +10,7 @@
     This chooses ALL the elements with class 'panel'
 */
 
-const panels = document.querySelectorAll('.panels');
+const panels = document.querySelectorAll('.panel');
 
 
 /*  I take the array of panels, and for each of them, I execute

@@ -29,7 +29,7 @@ body {
 }
 
 .panel {
-    background-size: small cover;
+    background-size: cover;
     background-position: center; /* we see center of image, eventhough we can't see whole image */
     background-repeat: no-repeat;
     height: 80vh;
@@ -41,6 +41,7 @@ body {
     position: relative; /* outter panel class is relative, so you can position h3's inside as absolute */
     transition: flex 0.7s ease-in;
 }
+
 
 .panel h3 {
     font-size: 24px;
